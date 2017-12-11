@@ -1,24 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Heavy</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--MainVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="My_Books" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="booksBG" translatesAutoresizingMaskIntoConstraints="NO" id="3A8-lH-PpX">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EXc-TK-Aml" customClass="MainViewButton" customModule="My_Books" customModuleProvider="target">
+                                <rect key="frame" x="32" y="296" width="310" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="310" id="aYn-KT-H1U"/>
+                                    <constraint firstAttribute="height" constant="75" id="wAK-qE-bIA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                <state key="normal" title="Wish List">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ARs-KW-d4n" customClass="MainViewButton" customModule="My_Books" customModuleProvider="target">
+                                <rect key="frame" x="32" y="171" width="310" height="75"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                <state key="normal" title="All Books">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PPU-ji-uHV" customClass="MainViewButton" customModule="My_Books" customModuleProvider="target">
+                                <rect key="frame" x="32" y="421" width="310" height="75"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                <state key="normal" title="Random Book">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3A8-lH-PpX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="306-78-ch8"/>
+                            <constraint firstItem="PPU-ji-uHV" firstAttribute="height" secondItem="EXc-TK-Aml" secondAttribute="height" id="5Pw-Xf-e4I"/>
+                            <constraint firstItem="EXc-TK-Aml" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9LS-Rl-FdN"/>
+                            <constraint firstItem="ARs-KW-d4n" firstAttribute="height" secondItem="EXc-TK-Aml" secondAttribute="height" id="CJ4-v7-bgz"/>
+                            <constraint firstItem="EXc-TK-Aml" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="RKY-aA-jFr"/>
+                            <constraint firstItem="3A8-lH-PpX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="STo-1t-hbO"/>
+                            <constraint firstItem="EXc-TK-Aml" firstAttribute="top" secondItem="ARs-KW-d4n" secondAttribute="bottom" constant="50" id="WdZ-0y-gDI"/>
+                            <constraint firstItem="PPU-ji-uHV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cts-Zm-bqe"/>
+                            <constraint firstItem="ARs-KW-d4n" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dWF-zw-KQC"/>
+                            <constraint firstItem="PPU-ji-uHV" firstAttribute="width" secondItem="EXc-TK-Aml" secondAttribute="width" id="hcf-gR-qdq"/>
+                            <constraint firstItem="3A8-lH-PpX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="kNC-dE-ISu"/>
+                            <constraint firstItem="3A8-lH-PpX" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="pJc-Gw-8kU"/>
+                            <constraint firstItem="PPU-ji-uHV" firstAttribute="top" secondItem="EXc-TK-Aml" secondAttribute="bottom" constant="50" id="tZo-Vn-rZL"/>
+                            <constraint firstItem="ARs-KW-d4n" firstAttribute="width" secondItem="EXc-TK-Aml" secondAttribute="width" id="yED-Y7-z3w"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="31.934032983508249"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="booksBG" width="1920" height="1280"/>
+    </resources>
 </document>
