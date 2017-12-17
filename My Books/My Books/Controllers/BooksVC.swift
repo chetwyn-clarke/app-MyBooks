@@ -12,32 +12,33 @@ class BooksVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var booksTable: UITableView!
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
         booksTable.dataSource = self
         booksTable.delegate = self
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        //booksTable.rowHeight = UITableViewAutomaticDimension
+        //booksTable.estimatedRowHeight = 80
+        
+        booksTable.rowHeight = 80
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //TODO
-        return 5
+        
+        return DataService.instance.getAllBooks().count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //TODO
+        
         if let cell = tableView.dequeueReusableCell(withIdentifier: "BookCell") as? BookCell {
-            //TODO
+            let book = DataService.instance.getAllBooks()[indexPath.row]
+            cell.updateViews(book: book)
             return cell
+        } else {
+            return BookCell()
         }
     }
-
-
+    
 }
 
