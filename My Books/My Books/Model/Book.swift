@@ -8,9 +8,10 @@
 
 import Foundation
 
-class Book {
+struct Book {
     
     var name: String = ""
+    var authors: String?
     var firstAuthor: String?
     var secondAuthor: String?
     var thirdAuthor: String?
