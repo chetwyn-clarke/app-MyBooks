@@ -56,7 +56,7 @@ class BooksVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         if let bookDetailVC = segue.destination as? BookDetailVC{
             assert(sender as? Book != nil)
-            bookDetailVC.initBooks(book: sender as! Book)
+            bookDetailVC.initBook(book: sender as! Book)
         }
     }
     

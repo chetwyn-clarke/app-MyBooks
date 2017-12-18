@@ -14,13 +14,6 @@ class MainVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -31,13 +24,15 @@ class MainVC: UIViewController {
                 if let booksVC = navController.topViewController as? BooksVC {
                     booksVC.initBooks(books: sender as! [Book])
                     booksVC.navigationItem.title = vcTitle
-                    print("Books sent")
-                } else {
-                    print("No books sent")
                 }
-            } else {
-                print("Cannot find Nav Controller")
             }
+            
+        } else if segue.identifier == "toRandomBook" {
+            
+            if let bookDetailVC = segue.destination as? BookDetailVC {
+                bookDetailVC.initBook(book: sender as! Book)
+            }
+            
         }
         
     }
@@ -55,23 +50,12 @@ class MainVC: UIViewController {
     }
     
     @IBAction func randomBookBtnWasPressed(_ sender: Any) {
-        //TODO: To finish
+        let book = DataService.instance.getRandomBook()
+        performSegue(withIdentifier: "toRandomBook", sender: book)
     }
     
     @IBAction func unWindToMainMenu(unwindSegue: UIStoryboardSegue) {
         
     }
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

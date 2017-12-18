@@ -24,7 +24,7 @@ class BookDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         bookDetailTable.rowHeight = UITableViewAutomaticDimension
     }
     
-    func initBooks(book: Book) {
+    func initBook(book: Book) {
         self.book = book
     }
     
