@@ -27,7 +27,6 @@ class BooksVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     func initBooks(books: [Book]) {
         self.books = books
-        print("Books received")
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -45,6 +44,19 @@ class BooksVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             return cell
         } else {
             return BookCell()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let book = books[indexPath.row]
+        performSegue(withIdentifier: "toBookDetailVC", sender: book)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let bookDetailVC = segue.destination as? BookDetailVC{
+            assert(sender as? Book != nil)
+            bookDetailVC.initBooks(book: sender as! Book)
         }
     }
     

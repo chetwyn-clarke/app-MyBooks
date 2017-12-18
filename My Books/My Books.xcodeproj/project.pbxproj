@@ -18,6 +18,8 @@
 		73701E4C1FDF3FF600EDD6DE /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73701E4B1FDF3FF600EDD6DE /* MainVC.swift */; };
 		73701E4E1FDF446100EDD6DE /* MainViewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73701E4D1FDF446100EDD6DE /* MainViewButton.swift */; };
 		73701E501FDF46D600EDD6DE /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73701E4F1FDF46D600EDD6DE /* Book.swift */; };
+		73E26ED51FE81F6400061818 /* BookDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E26ED41FE81F6400061818 /* BookDetailVC.swift */; };
+		73E26ED71FE822B700061818 /* BookDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E26ED61FE822B700061818 /* BookDetailCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		73701E4B1FDF3FF600EDD6DE /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		73701E4D1FDF446100EDD6DE /* MainViewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewButton.swift; sourceTree = "<group>"; };
 		73701E4F1FDF46D600EDD6DE /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		73E26ED41FE81F6400061818 /* BookDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailVC.swift; sourceTree = "<group>"; };
+		73E26ED61FE822B700061818 /* BookDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,7 @@
 			children = (
 				73701E4D1FDF446100EDD6DE /* MainViewButton.swift */,
 				736259ED1FE6CF9E00F86A68 /* BookCell.swift */,
+				73E26ED61FE822B700061818 /* BookDetailCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -110,6 +115,7 @@
 			children = (
 				73701E4B1FDF3FF600EDD6DE /* MainVC.swift */,
 				73701E381FDF3EB500EDD6DE /* BooksVC.swift */,
+				73E26ED41FE81F6400061818 /* BookDetailVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -191,9 +197,11 @@
 				73701E391FDF3EB500EDD6DE /* BooksVC.swift in Sources */,
 				736259F31FE6E3BB00F86A68 /* Helpers.swift in Sources */,
 				73701E4C1FDF3FF600EDD6DE /* MainVC.swift in Sources */,
+				73E26ED71FE822B700061818 /* BookDetailCell.swift in Sources */,
 				73701E371FDF3EB500EDD6DE /* AppDelegate.swift in Sources */,
 				73701E501FDF46D600EDD6DE /* Book.swift in Sources */,
 				73701E4E1FDF446100EDD6DE /* MainViewButton.swift in Sources */,
+				73E26ED51FE81F6400061818 /* BookDetailVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

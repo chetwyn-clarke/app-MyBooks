@@ -55,6 +55,7 @@ class MainVC: UIViewController {
     }
     
     @IBAction func randomBookBtnWasPressed(_ sender: Any) {
+        //TODO: To finish
     }
     
     @IBAction func unWindToMainMenu(unwindSegue: UIStoryboardSegue) {
