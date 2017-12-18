@@ -37,6 +37,9 @@
                                 <state key="normal" title="Wish List">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="wishListBtnWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VZB-OP-6hP"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ARs-KW-d4n" customClass="MainViewButton" customModule="My_Books" customModuleProvider="target">
                                 <rect key="frame" x="32" y="171" width="310" height="75"/>
@@ -45,7 +48,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="tpx-3o-n83" kind="show" id="IXE-8y-leR"/>
+                                    <action selector="allBooksBtnWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AV1-9q-2fB"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PPU-ji-uHV" customClass="MainViewButton" customModule="My_Books" customModuleProvider="target">
@@ -54,6 +57,9 @@
                                 <state key="normal" title="Random Book">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="randomBookBtnWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UxN-oR-ZCV"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -75,6 +81,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <segue destination="tpx-3o-n83" kind="show" identifier="toBooksList" id="PBc-84-bP6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -99,21 +108,38 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Book Title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1dq-rV-jD2">
-                                                    <rect key="frame" x="15" y="11" width="345" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
-                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Book Authors" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PCW-3x-H0G">
-                                                    <rect key="frame" x="15" y="39" width="345" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
-                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zWF-ND-x5a">
+                                                    <rect key="frame" x="16" y="0.0" width="349" height="74.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book Title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1dq-rV-jD2">
+                                                            <rect key="frame" x="0.0" y="0.0" width="349" height="50"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="50" id="W6L-iw-rJ1"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book Authors" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PCW-3x-H0G">
+                                                            <rect key="frame" x="0.0" y="50" width="349" height="24.5"/>
+                                                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="1dq-rV-jD2" firstAttribute="leading" secondItem="zWF-ND-x5a" secondAttribute="leading" id="F9S-VK-Rjy"/>
+                                                        <constraint firstAttribute="trailing" secondItem="1dq-rV-jD2" secondAttribute="trailing" id="iZO-zz-AMn"/>
+                                                        <constraint firstItem="1dq-rV-jD2" firstAttribute="top" secondItem="zWF-ND-x5a" secondAttribute="top" id="nuS-l3-wkL"/>
+                                                    </constraints>
+                                                </stackView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="zWF-ND-x5a" firstAttribute="leading" secondItem="5Xe-Sj-Hu2" secondAttribute="leading" constant="16" id="3v2-JV-e70"/>
+                                                <constraint firstAttribute="trailing" secondItem="zWF-ND-x5a" secondAttribute="trailing" constant="10" id="fpq-aH-yX4"/>
+                                                <constraint firstItem="zWF-ND-x5a" firstAttribute="top" secondItem="5Xe-Sj-Hu2" secondAttribute="top" id="sUA-M4-ak9"/>
+                                                <constraint firstAttribute="bottom" secondItem="zWF-ND-x5a" secondAttribute="bottom" constant="5" id="xbg-Tm-873"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="bookAuthors" destination="PCW-3x-H0G" id="x6G-0k-HmI"/>
@@ -132,12 +158,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QIo-YX-cWb"/>
                     </view>
-                    <navigationItem key="navigationItem" id="0kf-IF-PvH"/>
+                    <navigationItem key="navigationItem" id="0kf-IF-PvH">
+                        <barButtonItem key="leftBarButtonItem" title="Main Menu" id="dUu-Gu-jwf">
+                            <connections>
+                                <segue destination="VNe-Cg-XCo" kind="unwind" unwindAction="unWindToMainMenuWithUnwindSegue:" id="m0v-LJ-epx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="booksTable" destination="hxC-be-Xi9" id="OpI-6Q-4Jt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gM9-ec-yJ1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="VNe-Cg-XCo" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2204" y="31.934032983508249"/>
         </scene>
