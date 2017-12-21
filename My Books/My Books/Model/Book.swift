@@ -13,6 +13,7 @@ struct Book {
     private(set) public var name: String
     
     private(set) public var authors: String?
+    private(set) public var authors2: [Author]?
     private(set) public var firstAuthor: String?
     private(set) public var secondAuthor: String?
     private(set) public var thirdAuthor: String?
@@ -31,6 +32,10 @@ struct Book {
         self.name = name
         self.authors = authors
         self.readStatus = readStatus
+    }
+    
+    func addAuthor() {
+        //TODO:
     }
     
 }

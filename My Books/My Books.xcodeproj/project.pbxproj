@@ -10,6 +10,7 @@
 		736259EE1FE6CF9E00F86A68 /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736259ED1FE6CF9E00F86A68 /* BookCell.swift */; };
 		736259F11FE6D3E000F86A68 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736259F01FE6D3E000F86A68 /* DataService.swift */; };
 		736259F31FE6E3BB00F86A68 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736259F21FE6E3BB00F86A68 /* Helpers.swift */; };
+		736F818B1FEBF53700C534ED /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736F818A1FEBF53700C534ED /* Author.swift */; };
 		73701E371FDF3EB500EDD6DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73701E361FDF3EB500EDD6DE /* AppDelegate.swift */; };
 		73701E391FDF3EB500EDD6DE /* BooksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73701E381FDF3EB500EDD6DE /* BooksVC.swift */; };
 		73701E3C1FDF3EB500EDD6DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73701E3A1FDF3EB500EDD6DE /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 		736259ED1FE6CF9E00F86A68 /* BookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
 		736259F01FE6D3E000F86A68 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		736259F21FE6E3BB00F86A68 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		736F818A1FEBF53700C534ED /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
 		73701E331FDF3EB500EDD6DE /* My Books.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Books.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		73701E361FDF3EB500EDD6DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73701E381FDF3EB500EDD6DE /* BooksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksVC.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				73701E4F1FDF46D600EDD6DE /* Book.swift */,
+				736F818A1FEBF53700C534ED /* Author.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 				73701E4C1FDF3FF600EDD6DE /* MainVC.swift in Sources */,
 				73E26ED71FE822B700061818 /* BookDetailCell.swift in Sources */,
 				73701E371FDF3EB500EDD6DE /* AppDelegate.swift in Sources */,
+				736F818B1FEBF53700C534ED /* Author.swift in Sources */,
 				73701E501FDF46D600EDD6DE /* Book.swift in Sources */,
 				73701E4E1FDF446100EDD6DE /* MainViewButton.swift in Sources */,
 				73E26ED51FE81F6400061818 /* BookDetailVC.swift in Sources */,

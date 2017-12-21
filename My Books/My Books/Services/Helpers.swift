@@ -44,3 +44,5 @@ func createBookStatus(book: Book) -> String {
     print(detailText)
     return detailText
 }
+
+
