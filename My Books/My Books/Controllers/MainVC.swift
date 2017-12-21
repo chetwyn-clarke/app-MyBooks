@@ -37,6 +37,7 @@ class MainVC: UIViewController {
         
     }
     
+    
     @IBAction func allBooksBtnWasPressed(_ sender: Any) {
         vcTitle = "All Books"
         let books = DataService.instance.getAllBooks()
@@ -52,6 +53,7 @@ class MainVC: UIViewController {
     @IBAction func randomBookBtnWasPressed(_ sender: Any) {
         let book = DataService.instance.getRandomBook()
         performSegue(withIdentifier: "toRandomBook", sender: book)
+        
     }
     
     @IBAction func unWindToMainMenu(unwindSegue: UIStoryboardSegue) {
