@@ -10,6 +10,8 @@ import UIKit
 
 class MainVC: UIViewController {
     
+    @IBOutlet weak var randomBookBtn: UIButton!
+    
     var vcTitle: String = ""
 
     override func viewDidLoad() {
@@ -25,6 +27,7 @@ class MainVC: UIViewController {
                     booksVC.initBooks(books: sender as! [Book])
                     booksVC.navigationItem.title = vcTitle
                 }
+                
             }
             
         } else if segue.identifier == "toRandomBook" {
@@ -33,6 +36,13 @@ class MainVC: UIViewController {
                 bookDetailVC.initBook(book: sender as! Book)
             }
             
+        } else if segue.identifier == "toRandomBook2" {
+            if let navController = segue.destination as? UINavigationController {
+                if let randomBookVC = navController.topViewController as? RandomBookVC {
+                    let book = sender as! Book
+                    randomBookVC.initBook(book: book)
+                }
+            }
         }
         
     }
@@ -52,8 +62,8 @@ class MainVC: UIViewController {
     
     @IBAction func randomBookBtnWasPressed(_ sender: Any) {
         let book = DataService.instance.getRandomBook()
-        performSegue(withIdentifier: "toRandomBook", sender: book)
-        
+        //performSegue(withIdentifier: "toRandomBook", sender: book)
+        performSegue(withIdentifier: "toRandomBook2", sender: book)
     }
     
     @IBAction func unWindToMainMenu(unwindSegue: UIStoryboardSegue) {
